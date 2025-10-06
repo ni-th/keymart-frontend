@@ -1,4 +1,4 @@
-import React, { use } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../contex/AuthContex";
 import type { Register } from "../types/types";
