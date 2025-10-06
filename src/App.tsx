@@ -5,6 +5,7 @@ import { initFlowbite } from "flowbite";
 import Dashboard from "./pages/Dashboard";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
+import { AuthProvider } from "./contex/AuthContex";
 
 const App: React.FC = () => {
   const location = useLocation();
@@ -20,16 +21,18 @@ const App: React.FC = () => {
 
   return (
     <>
-      <Header />
-      <div className="max-w-6xl mx-auto flex justify-center">
-        <div className="w-full m-2">
-          <Routes>
-            <Route path="/dashboard" element={<Dashboard />} />
-            <Route path="/login" element={<Login />} />
-            <Route path="/register" element={<Register />} />
-          </Routes>
+      <AuthProvider>
+        <Header />
+        <div className="max-w-6xl mx-auto flex justify-center mt-20">
+          <div className="w-full m-2">
+            <Routes>
+              <Route path="/dashboard" element={<Dashboard />} />
+              <Route path="/login" element={<Login />} />
+              <Route path="/register" element={<Register />} />
+            </Routes>
+          </div>
         </div>
-      </div>
+      </AuthProvider>
     </>
   );
 };
