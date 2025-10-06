@@ -4,8 +4,9 @@ import Header from "./components/Header";
 import { initFlowbite } from "flowbite";
 import Dashboard from "./pages/Dashboard";
 import Login from "./pages/Login";
-import Register from "./pages/Register";
 import { AuthProvider } from "./contex/AuthContex";
+import Home from "./pages/Home";
+import Register from "./pages/Register";
 
 const App: React.FC = () => {
   const location = useLocation();
@@ -28,7 +29,8 @@ const App: React.FC = () => {
             <Routes>
               <Route path="/dashboard" element={<Dashboard />} />
               <Route path="/login" element={<Login />} />
-              <Route path="/register" element={<Register />} />
+              <Route path="/register" element={<Register/>} />
+              <Route path="/" element={<Home />} />
             </Routes>
           </div>
         </div>

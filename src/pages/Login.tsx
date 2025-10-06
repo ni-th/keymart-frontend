@@ -31,7 +31,7 @@ const Login = () => {
         title: "Login successful",
         icon: "success",
       });
-      navigate("/"); // redirect to home or dashboard
+      navigate("/dashboard"); // redirect to home or dashboard
     } catch (error) {
       console.error("Login failed:", error);
       Swal.fire({

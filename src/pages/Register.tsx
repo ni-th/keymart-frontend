@@ -1,12 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../contex/AuthContex";
-import type { Register } from "../types/types";
+import type { Register as RegisterType } from "../types/types";
 import Swal from "sweetalert2";
 
 const Register = () => {
   const useAuth = React.useContext(AuthContext);
-  const [form, setForm] = React.useState<Register>({
+  const [form, setForm] = React.useState<RegisterType>({
     name: "nimantha",
     email: "nimantha@x.com",
     password: "11111111",
